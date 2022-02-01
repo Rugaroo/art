@@ -280,7 +280,10 @@ fieldset:nth-child(1) {
   background: #FBDD46;
   border-radius: 7px;
 }
-
+.form-btn-zip {
+  display: flex;
+  align-items: center;
+}
 .button-prev {
   cursor: pointer;
   width: 81px;
@@ -428,7 +431,7 @@ fieldset:nth-child(2) .line-zip {
 
 .consult-tel {
   max-width: 370px;
-  margin-right: 180px;
+  margin-right: 190px;
 }
 
 .consult-input {
@@ -474,18 +477,44 @@ fieldset:nth-child(2) .line-zip {
   line-height: 140%;
   text-align: right;
 }
-
-@media (max-width: 1680px) {
+@media (orientation: landscape) and (max-height: 900px) {
+  .quiz {
+    background: url(img/background.png) top -100px right /auto 150% no-repeat,
+    url(img/bg2.png) top left/auto 150% no-repeat;
+  }
+  .form-bg {
+    left: -600px;
+    width: 600px;
+  }
   fieldset:nth-child(2) .form-bg {
     width: 1000px;
     left: -800px;
   }
 }
+@media (max-width: 1680px) {
+  fieldset:nth-child(2) .form-bg {
+    width: 800px;
+    left: -600px;
+  }
+
+  .quiz {
+    background: url(img/background.png) top -100px right /auto cover no-repeat,
+    url(img/bg2.png) top left/auto cover no-repeat;
+  }
+  .form-bg {
+    width: 550px;
+    left: -550px;
+  }
+}
 
 @media (max-width: 1280px) {
+  .quiz {
+    background: url(img/background.png) top right -500px /auto 100% no-repeat,
+    url(img/bg2.png) top left/auto 100% no-repeat;
+  }
   .form-bg {
-    width: 600px;
-    left: -600px;
+    width: 500px;
+    left: -500px;
   }
 
   fieldset:nth-child(2) .form-bg {
@@ -498,35 +527,68 @@ fieldset:nth-child(2) .line-zip {
   .form-bg {
     width: 400px;
     left: -400px;
+    position: initial;
   }
-
+  .phone, .job-time {
+    font-size: 18px;
+    line-height: 22px;
+  }
   fieldset:nth-child(2) .form-bg {
-    width: 600px;
+    width: 400px;
     left: -400px;
   }
+  .form-button {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .line-zip {
+    margin-bottom: 20px;
+  }
+  .button-prev {
+    margin-right: 20px;
+  }
 }
-
+@media (max-width: 768px) {
+  .job-time {
+    display: none;
+  }
+}
 @media (max-width: 640px) {
   .container {
     padding-left: 20px;
     padding-right: 20px;
   }
-
-  .job-time {
-    display: none;
+  .quiz {
+    background: url(img/background.png) top right -300px /auto 100% no-repeat,
+    url(img/bg2.png) top left/auto 100% no-repeat;
   }
+  .logo-zip {
+    margin-right: 0;
+  }
+  .form-bg {
+    
+    width: 342px;
+    height: 231.86px;
+  }
+  
+  fieldset:nth-child(2) .form-bg {
+    position: initial;
+    width: 302px;
+    height: 201px;
+  }
+  
 
   .phone {
     font-size: 18px;
     line-height: 22px;
   }
 
-  fieldset {
+  fieldset:nth-child(1) {
     margin-top: 0;
   }
 
   .quiz-content {
-    max-width: 320px;
+    max-width: 100%;
   }
 
   .form-subtitle {
@@ -543,7 +605,13 @@ fieldset:nth-child(2) .line-zip {
   .form-btn {
     font-size: 18px;
     line-height: 21px;
-    padding: 20px 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    max-width: 320px;
+    width: 100%;
+    height: 60px;
   }
 
   .question {
@@ -557,7 +625,7 @@ fieldset:nth-child(2) .line-zip {
     max-width: 600px;
     padding: 36px 20px;
   }
-
+  
   fieldset:nth-child(1) {
     align-items: flex-start;
   }
@@ -589,46 +657,19 @@ fieldset:nth-child(2) .line-zip {
     height: 61px;
     margin-right: 29px;
   }
-
-  .copyright {
-    font-size: 18px;
-    line-height: 140%;
-  }
-}
-
-@media (max-width: 360px) {
-  .quiz {
-    background: url(img/bg360.png) top right/auto 100% no-repeat;
-  }
-  .logo-zip {
-    margin-right: 0;
-  }
-  .form-bg {
-    position: initial;
-    width: 342px;
-    height: 231.86px;
-  }
-
-  fieldset:nth-child(2) .form-bg {
-    position: initial;
-    width: 302px;
-    height: 201px;
-  }
-
-  .form-wrap,
-  .question,
-  .form-button {
-    max-width: 320px;
-  }
-
   .form-wrap {
     margin-bottom: 44px;
   }
-
+  .line-zip {
+    margin-bottom: 0;
+  }
   .line {
     width: 320px;
+    margin-right: 0;
   }
-
+  .form-btn-zip {
+    margin-top: 20px;
+  }
   .button-next {
     width: 220px;
   }
@@ -667,13 +708,20 @@ fieldset:nth-child(2) .line-zip {
     width: 320px;
     height: 45px;
     margin-bottom: 12px;
+    margin-right: auto;
+    margin-left: auto;
   }
-
+  .btn-zip {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .send-btn {
     margin-top: 0;
     font-size: 18px;
     line-height: 21px;
     padding: 20px 32px;
+    width: 320px;
   }
 
   .quiz-policy {
@@ -685,8 +733,42 @@ fieldset:nth-child(2) .line-zip {
     font-size: 10px;
     line-height: 12px;
   }
-
+  .form-wrap,
+  .question,
+  .form-button {
+    max-width: 320px;
+  }
   .copyright {
     text-align: center;
   }
+  .copyright {
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
+@media (max-width: 640px) and (max-height: 750px) {
+  .quiz {
+    background: url(img/background.png) top right -150px /auto 100% no-repeat,
+    url(img/bg2.png) top left/auto 100% no-repeat;
+  }
+  fieldset:nth-child(2) .form-bg {
+    display: none;
+  }
+}
+@media (max-height: 600px) {
+  .form-bg {
+    
+    display: none;
+  }
+}
+@media (max-width: 360px) {
+  .quiz {
+    background: url(img/background.png) center right -250px/auto 100% no-repeat;
+  }
+  
+  /* .form-bg {
+    
+    width: 342px;
+    height: 231.86px;
+  } */
 }
