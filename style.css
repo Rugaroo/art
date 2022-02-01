@@ -558,7 +558,9 @@ fieldset:nth-child(2) .line-zip {
     overflow-y: hidden;
   }
   body {
-    position: relative
+    position: relative;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   }
   .container {
     padding-left: 20px;
