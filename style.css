@@ -555,7 +555,7 @@ fieldset:nth-child(2) .line-zip {
 }
 @media (max-width: 640px) {
   html, body {
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
   body {
     position: relative
