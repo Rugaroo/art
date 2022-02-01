@@ -31,6 +31,8 @@ buttonPrev.addEventListener('click', prev);
 quizTel.addEventListener('click', quiz);
 fourBtn.addEventListener('click', last);
 
+document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
+
 document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
